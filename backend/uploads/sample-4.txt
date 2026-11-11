@@ -1,0 +1,4 @@
+SAMPLE FILE
+DBMS Normalization Notes
+
+This is a demo file added by seed.js. Upload real notes from the website.

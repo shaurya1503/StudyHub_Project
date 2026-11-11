@@ -1,0 +1,4 @@
+SAMPLE FILE
+Logic Gates and Boolean Algebra
+
+This is a demo file added by seed.js. Upload real notes from the website.

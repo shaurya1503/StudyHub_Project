@@ -1,0 +1,4 @@
+SAMPLE FILE
+Data Structures PYQ 2025
+
+This is a demo file added by seed.js. Upload real notes from the website.

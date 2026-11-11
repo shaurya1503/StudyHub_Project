@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StudyHub – Study Resources and Student Community</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home">StudyHub</a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#study">Study Point</a>
+    <a href="#community">Community</a>
+    <span id="navUser"></span>
+  </nav>
+</header>
+
+<main>
+<!-- HOME -->
+<section id="home" class="page">
+  <div class="hero">
+    <h1>Learn, share and connect.</h1>
+    <p>StudyHub brings semester-wise notes, previous year question papers and a student community into one place.</p>
+    <div class="row">
+      <a class="btn" href="#study">Open Study Point</a>
+      <a class="btn ghost" href="#community">Join Community</a>
+    </div>
+  </div>
+  <div class="cards3">
+    <div class="card"><h3>Study Point</h3><p>Find notes and PYQs by semester and subject.</p></div>
+    <div class="card"><h3>Community</h3><p>Ask doubts, share information and discuss.</p></div>
+    <div class="card"><h3>Share</h3><p>Upload useful material for other students.</p></div>
+  </div>
+</section>
+
+<!-- AUTH -->
+<section id="auth" class="page">
+  <div class="card narrow">
+    <div class="tabs">
+      <button id="tabLogin" class="tab active">Login</button>
+      <button id="tabRegister" class="tab">Register</button>
+    </div>
+    <form id="loginForm" novalidate>
+      <label>Email<input type="email" id="lEmail" placeholder="you@example.com"></label>
+      <label>Password<input type="password" id="lPass" placeholder="Minimum 6 characters"></label>
+      <button class="btn" type="submit">Login</button>
+    </form>
+    <form id="registerForm" novalidate hidden>
+      <label>Full name<input type="text" id="rName"></label>
+      <label>Email<input type="email" id="rEmail"></label>
+      <div class="row2">
+        <label>Course<input type="text" id="rCourse" value="B.Tech CSE"></label>
+        <label>Semester
+          <select id="rSem"></select>
+        </label>
+      </div>
+      <label>Password<input type="password" id="rPass"></label>
+      <label>Confirm password<input type="password" id="rPass2"></label>
+      <button class="btn" type="submit">Create account</button>
+    </form>
+    <p id="authMsg" class="msg" role="status"></p>
+  </div>
+</section>
+
+<!-- STUDY POINT -->
+<section id="study" class="page">
+  <h2>Study Point</h2>
+  <p id="uploadHint" class="muted">Login to upload your own notes and question papers.</p>
+  <form id="uploadForm" class="card" novalidate hidden>
+    <h3>Upload a resource</h3>
+    <label>Title<input type="text" id="uTitle" placeholder="e.g. Trees – Unit 3 Notes"></label>
+    <div class="row2">
+      <label>Semester<select id="uSem"></select></label>
+      <label>Subject<select id="uSub"></select></label>
+    </div>
+    <div class="row2">
+      <label>Type<select id="uType"><option>Notes</option><option>PYQ</option><option>Assignment</option><option>Other</option></select></label>
+      <label>File (PDF, DOC, PPT, TXT, image – max 10 MB)<input type="file" id="uFile"></label>
+    </div>
+    <button class="btn" type="submit">Upload</button>
+    <p id="uploadMsg" class="msg" role="status"></p>
+  </form>
+  <div class="filters">
+    <input id="q" type="search" placeholder="Search title or subject">
+    <select id="fSem"></select>
+    <select id="fSub"></select>
+    <select id="fType">
+      <option value="">All types</option>
+      <option>Notes</option><option>PYQ</option><option>Assignment</option>
+    </select>
+  </div>
+  <p id="count" class="muted"></p>
+  <div id="resList" class="grid"></div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community" class="page">
+  <h2>Student Community</h2>
+  <form id="postForm" class="card" novalidate>
+    <textarea id="postText" rows="3" placeholder="Ask a doubt or share something useful..."></textarea>
+    <div class="row">
+      <select id="postCat">
+        <option>Academics</option><option>Doubts</option><option>Events</option><option>General</option>
+      </select>
+      <button class="btn" type="submit">Post</button>
+    </div>
+  </form>
+  <p id="postMsg" class="msg" role="status"></p>
+  <div id="postList"></div>
+</section>
+</main>
+
+<footer>StudyHub – B.Tech Capstone Project</footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+SAMPLE FILE
+Software Engineering – SDLC Models
+
+This is a demo file added by seed.js. Upload real notes from the website.
