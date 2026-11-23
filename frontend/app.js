@@ -103,7 +103,7 @@ async function loadResources() {
 function renderResources() {
   $('count').textContent = resources.length + ' resource' + (resources.length === 1 ? '' : 's') + ' found';
   $('resList').innerHTML = resources.length ? resources.map((r) =>
-    '<div class="card"><span class="tag">' + esc(r.resourceType) + '</span><span class="tag">Semester ' + r.semester + '</span>' +
+    '<div class="card" data-type="' + esc(r.resourceType) + '"><span class="tag">' + esc(r.resourceType) + '</span><span class="tag">Semester ' + r.semester + '</span>' +
     '<h3>' + esc(r.title) + '</h3><div class="meta">' + esc(r.subject) + '<br>Uploaded by ' + esc(r.uploadedBy ? r.uploadedBy.name : 'Unknown') + ' on ' + day(r.createdAt) + '</div>' +
     (r.description ? '<p>' + esc(r.description) + '</p>' : '') +
     '<div class="actions">' + (r.fileUrl ? '<a class="btn small" target="_blank" href="' + BASE + r.fileUrl + '">Download</a> ' : '') +
@@ -209,3 +209,8 @@ fillSelect($('uSem'), '', [1, 2, 3, 4, 5, 6, 7, 8].map((s) => [s, 'Semester ' + 
 $('rSem').value = '3'; $('uSem').value = '3';
 fillSelect($('subList'), '', allSubjects().map((s) => [s, s]));
 refreshSubjects(); updateUI(); showPage(); loadResources(); loadPosts();
+
+/* ---------- Dark mode ---------- */
+function setTheme(t) { document.documentElement.setAttribute('data-theme', t); $('themeBtn').textContent = t === 'dark' ? '☀️' : '🌙'; localStorage.setItem('sh_theme', t); }
+$('themeBtn').addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+setTheme(localStorage.getItem('sh_theme') || 'light');

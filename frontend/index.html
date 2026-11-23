@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>StudyHub – Study Resources and Student Community</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,6 +16,7 @@
     <a href="#study">Study Point</a>
     <a href="#community">Community</a>
     <a href="#profile" id="navProfile" hidden>Profile</a>
+    <button id="themeBtn" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
     <a href="#auth" id="navAuth" class="btn small">Login</a>
   </nav>
 </header>
@@ -22,17 +25,24 @@
 <!-- HOME -->
 <section id="home" class="page">
   <div class="hero">
-    <h1>Learn, share and connect.</h1>
-    <p>StudyHub brings semester-wise notes, previous year question papers and a student community into one place.</p>
+    <span class="pill">📚 Made by students, for students</span>
+    <h1>Learn, share and <span class="grad">connect.</span></h1>
+    <p>Semester-wise notes, previous year question papers and a student community, all in one place. No more scrolling through old WhatsApp groups.</p>
     <div class="row">
       <a class="btn" href="#study">Open Study Point</a>
       <a class="btn ghost" href="#community">Join Community</a>
     </div>
   </div>
   <div class="cards3">
-    <div class="card"><h3>Study Point</h3><p>Find notes and PYQs by semester and subject.</p></div>
-    <div class="card"><h3>Community</h3><p>Ask doubts, share information and discuss.</p></div>
-    <div class="card"><h3>Share</h3><p>Upload useful material for other students.</p></div>
+    <div class="card"><span class="ico">📖</span><h3>Study Point</h3><p class="muted">Find notes and PYQs by semester, subject and type in a few clicks.</p></div>
+    <div class="card"><span class="ico">💬</span><h3>Community</h3><p class="muted">Ask doubts, share information and discuss with your batch and seniors.</p></div>
+    <div class="card"><span class="ico">⬆️</span><h3>Share</h3><p class="muted">Upload useful material so it stays available for future batches.</p></div>
+  </div>
+  <h2 style="margin-top:28px">How it works</h2>
+  <div class="steps">
+    <div><b>Register</b><br><span class="muted">Create your free account.</span></div>
+    <div><b>Find or upload</b><br><span class="muted">Search notes and PYQs, or share your own.</span></div>
+    <div><b>Discuss</b><br><span class="muted">Post doubts and help others.</span></div>
   </div>
 </section>
 
