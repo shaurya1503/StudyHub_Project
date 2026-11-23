@@ -1,4 +1,6 @@
 # StudyHub – B.Tech Capstone Project (Prototype)
+##Live Demo
+https://studyhub-project-ibon.onrender.com/
 
 A web platform for university students: semester-wise notes and PYQs (Study Point) plus a student community.
 
